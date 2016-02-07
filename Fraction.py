@@ -50,48 +50,66 @@ class Fraction:
         return Fraction(newnum//common, newden//common)
 
     def __lt__(self, other):
-        # stub
+        """
+        less than override for Fraction class
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 < num2
 
     def __le__(self, other):
-        #stub
+        """
+        less than or equal override for Fraction class
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 <= num2
 
     def __eq__(self, other):
-        #stub
+        """
+        eqality override for Fraction class.  Deep equality
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 == num2
 
     def __ge__(self, other):
-        #stub
+        """
+        greater than or equal override for fraction class.
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 >= num2
 
     def __gt__(self, other):
-        #stub
+        """
+        greater than override for Fraction class
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 > num2
 
     def __ne__(self, other):
-        #stub
+        """
+        not equal comparison for Fraction class.  Deep equality
+        :param other: Fraction for comparison
+        :return: bool
+        """
         num1 = self.num * other.den
         num2 = self.den * other.num
         return num1 != num2
 
     def gcd(self, m, n):
-        """
-        method to simplify the results of math operations to lowest terms
-        :param m: numerator of Fraction to be simplified
-        :param n: denominator of Fraction to be simplified
-        :return: common factor of numerator and denominator
-        """
         while m % n != 0:
             oldm = m
             oldn = n
